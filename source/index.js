@@ -13,7 +13,7 @@ export default class Device {
 		this.properties = {};
 		this.actions = {};
 
-		for (let id in this.options.properties) {
+		for (let id of Object.keys(this.options.properties)) {
 			this.addProperty(Object.assign({
 				id: id
 			}, this.options.properties[id]));
@@ -21,12 +21,7 @@ export default class Device {
 	}
 
 	addProperty (property) {
-		if (!this.properties[property.id]) {
-			this.properties[property.id] = property;
-			return OK;
-		} else {
-			return DUPLICATE;
-		}
+		return addIfUnique(this, 'properties', property);
 	}
 
 	listProperties () {
@@ -51,12 +46,7 @@ export default class Device {
 	}
 
 	addAction (action) {
-		if (!this.actions[action.id]) {
-			this.actions[action.id] = action;
-			return OK;
-		} else {
-			return DUPLICATE;
-		}
+		return addIfUnique(this, 'actions', action);
 	}
 
 	listActions () {
@@ -71,4 +61,13 @@ export default class Device {
 		}
 	}
 
+}
+
+const addIfUnique = (that, type, o) => {
+	if (!that[type][o.id]) {
+		that[type][o.id] = o;
+		return OK;
+	} else {
+		return DUPLICATE;
+	}
 }
