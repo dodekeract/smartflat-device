@@ -4,14 +4,14 @@
   "description": "Implements a generic device API for smartflat.",
   "main": "build/",
   "scripts": {
-    "test": "npm run build --silent && mocha --compilers js:babel-register",
+    "test": "npm run build --silent && nyc --require babel-core/register mocha",
     "build": "babel --presets es2015 source/ -d build/",
     "prepublish": "npm run build",
     "postinstall": "echo '{ \"presets\": [\"es2015\"] }' > .babelrc",
     "start": "node build/",
     "watch": "nodemon --watch source --exec \"npm run build --silent && npm run start --silent\"",
     "watch-test": "nodemon --watch source --watch test --exec \"npm run test --silent\"",
-    "travis": "npm run test && nyc report --reporter=text-lcov --require babel-core/register mocha | coveralls"
+    "travis": "npm run test && nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
