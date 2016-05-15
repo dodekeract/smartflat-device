@@ -10,6 +10,12 @@
 
 Implements a generic device for [smartflat](https://smartfl.at).
 
+## Installation
+
+- `git clone https://github.com/dodekeract/smartflat-device`
+- `npm install`
+- `npm run build`
+
 ## FAQ
 
 ### Why is `/build` published on GitHub? Isn't that redundant?
