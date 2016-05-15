@@ -6,7 +6,7 @@
 [![Code Climate](https://codeclimate.com/github/dodekeract/smartflat-device/badges/gpa.svg)](https://codeclimate.com/github/dodekeract/smartflat-device)
 [![Coverage Status](https://coveralls.io/repos/github/dodekeract/smartflat-device/badge.svg?branch=master)](https://coveralls.io/github/dodekeract/smartflat-device?branch=master)
 [![NPM Downloads](https://img.shields.io/npm/dt/smartflat-device.svg)](https://npmjs.com/package/smartflat-device)
-[![NPM Dependencies](https://david-dm.org/dodekeract/smartflat-device.png)](https://david-dm.org/dodekeract/smartflat-device)
+[![NPM Dependencies](https://david-dm.org/dodekeract/smartflat-device.svg)](https://david-dm.org/dodekeract/smartflat-device)
 
 Implements a generic device for [smartflat](https://smartfl.at).
 
