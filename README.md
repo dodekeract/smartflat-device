@@ -10,3 +10,9 @@
 [![Code Documentation](https://inch-ci.org/github/dodekeract/smartflat-device.svg)](https://inch-ci.org/github/dodekeract/smartflat-device)
 
 Implements a generic device for smartflat.
+
+## FAQ
+
+### Why is `/build` published on GitHub? Isn't that redundant?
+
+It's needed for viewing the covered lines in coveralls, so I included it.
