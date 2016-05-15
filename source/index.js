@@ -15,7 +15,7 @@ export default class Device {
 
 		for (let id in this.options.properties) {
 			this.addProperty(Object.assign({
-				id: id,
+				id: id
 			}, this.options.properties[id]));
 		}
 	}
