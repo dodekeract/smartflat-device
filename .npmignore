@@ -1,5 +1,5 @@
 node_modules/
-build/
+source/
 npm-debug.log
 .gitignore
 .nyc_output/

@@ -1,12 +1,13 @@
 {
   "name": "smartflat-device",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Implements a generic device API for smartflat.",
   "main": "build/",
   "scripts": {
     "test": "npm run build --silent && nyc --require babel-core/register mocha",
     "build": "babel --presets es2015 source/ -d build/",
     "prepublish": "npm run build",
+    "postpublish": "PACKAGE_VERSION=$(cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag $PACKAGE_VERSION && git push --tags",
     "postinstall": "echo '{ \"presets\": [\"es2015\"] }' > .babelrc",
     "start": "node build/",
     "watch": "nodemon --watch source --exec \"npm run build --silent && npm run start --silent\"",
