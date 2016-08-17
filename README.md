@@ -18,6 +18,6 @@ Implements a generic device for [smartflat](https://smartfl.at).
 
 ## FAQ
 
-### Why is `/build` published on GitHub? Isn't that redundant?
+### Why is `build` published on GitHub? Isn't that redundant?
 
 It's needed for viewing the covered lines in coveralls, so I included it.
